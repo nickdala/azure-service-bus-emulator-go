@@ -29,6 +29,21 @@ docker compose -f ./docker/docker-compose.yaml up -d
 
 **Note:** To change the SQL password, edit the `./docker/.env` file and set *MSSQL_SA_PASSWORD* to a secure password per [Microsoft's documentation](https://learn.microsoft.com/sql/relational-databases/security/strong-passwords?view=sql-server-linux-ver16).
 
+3. Verify that the Docker container is running:
+
+```bash
+docker ps
+```
+
+You should see something like the following:
+
+```
+vscode ➜ /workspaces/azure-service-bus-emulator-go $ docker ps
+CONTAINER ID   IMAGE                                                          COMMAND                  CREATED          STATUS         PORTS                                                 NAMES
+de1d403a5e9c   mcr.microsoft.com/azure-messaging/servicebus-emulator:latest   "/ServiceBus_Emulato…"   13 minutes ago   Up 5 seconds   0.0.0.0:5672->5672/tcp, :::5672->5672/tcp, 8080/tcp   servicebus-emulator
+da806c13de70   mcr.microsoft.com/azure-sql-edge:latest                        "/opt/mssql/bin/perm…"   13 minutes ago   Up 6 seconds   1401/tcp, 1433/tcp                                    sqledge
+```
+
 ## Teardown
 
 To stop and remove the Docker container, run:
