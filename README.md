@@ -29,6 +29,20 @@ docker compose -f ./docker/docker-compose.yaml up -d
 
 **Note:** To change the SQL password, edit the `./docker/.env` file and set *MSSQL_SA_PASSWORD* to a secure password per [Microsoft's documentation](https://learn.microsoft.com/sql/relational-databases/security/strong-passwords?view=sql-server-linux-ver16).
 
+## Teardown
+
+To stop and remove the Docker container, run:
+
+```bash
+docker compose -f ./docker/docker-compose.yaml down
+```
+
+To remove any volumes created by the Docker container, run:
+
+```bash
+docker compose -f ./docker/docker-compose.yaml down -v
+```
+
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
