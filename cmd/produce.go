@@ -14,14 +14,14 @@ import (
 )
 
 const (
-	CAT     = "cat"
-	DOG     = "dog"
-	SNAKE   = "snake"
-	HAMSTER = "hamster"
+	CAT  = "cat"
+	DOG  = "dog"
+	BIRD = "bird"
+	FISH = "fish"
 )
 
 func SupportedPets() []string {
-	return []string{CAT, DOG, SNAKE, HAMSTER}
+	return []string{CAT, DOG, BIRD, FISH}
 }
 
 func IsSupportedPet(pet string) bool {
@@ -72,10 +72,10 @@ func produceCommand(cmd *cobra.Command, args []string, sender *azservicebus.Send
 		pet.PetType = petv1.PetType_PET_TYPE_CAT
 	case DOG:
 		pet.PetType = petv1.PetType_PET_TYPE_DOG
-	case SNAKE:
-		pet.PetType = petv1.PetType_PET_TYPE_SNAKE
-	case HAMSTER:
-		pet.PetType = petv1.PetType_PET_TYPE_HAMSTER
+	case BIRD:
+		pet.PetType = petv1.PetType_PET_TYPE_BIRD
+	case FISH:
+		pet.PetType = petv1.PetType_PET_TYPE_FISH
 	default:
 		pet.PetType = petv1.PetType_PET_TYPE_UNSPECIFIED
 	}
