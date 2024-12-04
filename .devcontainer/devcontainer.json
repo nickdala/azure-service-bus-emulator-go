@@ -1,0 +1,23 @@
+{
+    "name": "Azure Service Bus Emulator - GO",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+        "ghcr.io/devcontainers/features/go:1": {
+            "version": "1.23"
+        },
+        "ghcr.io/devcontainers/features/docker-in-docker:2.12.0": {
+            "version": "latest",
+            "moby": true
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "redhat.vscode-yaml",
+                "streetsidesoftware.code-spell-checker",
+                "golang.go",
+                "jinliming2.vscode-go-template"
+            ]
+        }
+    }
+}
