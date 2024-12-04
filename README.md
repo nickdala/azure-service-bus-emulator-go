@@ -1,6 +1,6 @@
 # Azure Service Bus Emulator Example in GO
 
-This repository contains an example of how to use the Azure Service Bus Emulator in Go. The emulator allows you to develop and test your applications locally without needing to connect to the actual Azure Service Bus service.
+This repository contains an example of how to use the [Azure Service Bus Emulator](https://learn.microsoft.com/azure/service-bus-messaging/test-locally-with-service-bus-emulator) in [Go](https://go.dev/). The emulator allows you to develop and test your applications locally without needing to connect to the actual Azure Service Bus service.
 
 This example demonstrates how to send and receive messages from a queue using the Azure SDK for Go. A secondary objective is to show how to use [Protocol Buffers](https://protobuf.dev/) (or protobuf) to encode the payload of the
 Azure Service Bus message. For more information on best practices for message encoding, see the [Message encoding considerations documentation](https://learn.microsoft.com/en-us/azure/architecture/best-practices/message-encode).
