@@ -5,7 +5,7 @@ go 1.23.4
 require (
 	github.com/Azure/azure-sdk-for-go/sdk/messaging/azservicebus v1.7.3
 	github.com/spf13/cobra v1.8.1
-	google.golang.org/protobuf v1.35.2
+	google.golang.org/protobuf v1.36.1
 )
 
 require (
